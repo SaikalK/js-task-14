@@ -1,0 +1,129 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.header {
+  background-color: black;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 0;
+}
+
+.header__nav {
+  width: 100%;
+  padding: 1em 0;
+}
+
+.logo {
+  text-align: center;
+  max-width: 70%;
+}
+
+.logo__link {
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  text-transform: uppercase;
+  background-color: white;
+  -webkit-border-radius: 1em;
+          border-radius: 1em;
+}
+
+.menu-toggler {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__link {
+  display: block;
+  padding: 5px 5px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px dotted black;
+  -webkit-border-radius: 1em;
+          border-radius: 1em;
+}
+
+.menu-show {
+  display: block;
+  background-color: yellow;
+}
+
+@media (min-width: 768px) {
+  .menu-toggler {
+    display: none;
+  }
+  .header__nav {
+    width: 70%;
+    margin-left: auto;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .menu__item + .menu__item {
+    margin-left: 1em;
+  }
+  .menu__link {
+    border: none;
+    -webkit-border-radius: 0,5em;
+            border-radius: 0,5em;
+    padding-left: 0,5em;
+    padding-right: 0,5em;
+  }
+  .logo {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
